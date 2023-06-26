@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+
+/*
+header
+*/
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  background: #ff3366;
+  cursor: pointer;
+}
+
+header .logo:hover {
+  background: #ff0033;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  display: block;
+  height: 100%;
+  line-height: 100px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/*
+Les element de search sont centre horizontalement et verticalement
+*/
+
+.search {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  height: 60px;
+  top: 1rem;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search .search-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 60px 0 20px;
+  border-radius: 40px;
+  font-size: 20px;
+  color: #333;
+  border: 0;
+  outline: none;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.search .search-input:focus {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search .search-input::placeholder {
+  color: #999;
+}
+
+.search .search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  background: #ff3366;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search .search-btn:hover {
+  background: #ff0033;
+}
+
+.search .search-btn:hover .fa-search {
+  transform: rotateZ(360deg);
+}
+
+.search .search-btn .fa-search {
+  transition: 0.3s;
+}
+
+/* 
+le .search h2 est centre horizontalement au dessu de la barre de recherche avec le text sur 1 ligne
+*/
+
+.search h2 {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  font-size: 25px;
+  color: #999;
+  font-weight: 300;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1rem;
+}
+
+/*
+.categories su trouve en dessous de la barre de recherche et est centre horizontalement avec les button sur 1 ligne
+*/
+
+.categorie {
+  position: absolute;
+  top: 50px;
+  margin: 50px auto;
+  width: 400px;
+  text-align: center;
+}
+
+.categorie button {
+  width: 100px;
+  height: 40px;
+  border: 0;
+  outline: none;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+  background: #ff3366;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categorie button:hover {
+  background: #ff0033;
+}
+
+.categorie button.active {
+  background: #ff0033;
+}
+
+.categorie button + button {
+  margin: 2px;
+}
+
+/*
+ les element de post sont centre horizontalement et verticalement
+*/
+
+.post {
+  position: relative;
+  margin: 50px auto;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+  position: relative;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: 22px;
+  color: #333;
+  font-weight: 300;
+}
+
+.card_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.card {
+  position: relative;
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 1rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 300;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/*
+    pagination 
+*/
+
+.pagination {
+    position: relative;
+    margin: 50px auto;
+    width: 400px;
+    height: 60px;
+    background: #fff;
+    border-radius: 40px;
+
+}
+
+.pagination .page-btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  background: #ff3366;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination .page-btn:hover {
+  background: #ff0033;
+}
+
+.pagination .page-btn.active {
+  background: #ff0033;
+}
